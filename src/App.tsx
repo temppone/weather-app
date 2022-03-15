@@ -1,13 +1,10 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { getLocaleWeather } from './api/openWeather';
 import { GlobalStyles } from './styles/global';
 import { mainTheme } from './styles/theme';
 
 const Home = lazy(() => import('./pages/Home'));
-const bla = 'foo';
-
 function App() {
   return (
     <div className="App">
