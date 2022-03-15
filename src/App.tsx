@@ -6,6 +6,7 @@ import { GlobalStyles } from './styles/global';
 import { mainTheme } from './styles/theme';
 
 const Home = lazy(() => import('./pages/Home'));
+const bla = 'foo';
 
 function App() {
   return (
