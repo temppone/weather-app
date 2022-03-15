@@ -27,10 +27,9 @@
     "prepare": "husky install",
     "lint": "eslint src --max-warnings=0"
   },
-  "lint-staged":{
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "git add"
+  "lint-staged": {
+    "src/**/*": [
+      "npm run lint --fix"
     ]
   },
   "eslintConfig": {
