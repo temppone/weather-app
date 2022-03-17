@@ -1,10 +1,11 @@
+import { screen } from '@testing-library/react';
 import React from 'react';
-import { render, screen } from '@testing-library/react';
 import Input from '.';
+import { renderWithTheme } from './../../../utils/jestThemeHelper';
 
 describe('<Input />', () => {
   it('should render the input', () => {
-    render(<Input />);
-    expect(screen.findByPlaceholderText('Cidade')).toBeInTheDocument();
+    renderWithTheme(<Input placeholder="teste" />);
+    expect(screen.findByPlaceholderText(/teste/i));
   });
 });

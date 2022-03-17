@@ -3,18 +3,24 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 50rem;
 `;
 
 export const InputContainer = styled.div`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 40rem;
 
-    border-radius: ${theme.border.radius};
-    padding: ${theme.spacings.xsmall};
+    border-radius: ${theme.border?.radius};
 
     &:focus-within {
-      background-color: ${theme.colors.boxBg};
+      background-color: transparent;
     }
   `}
 `;
@@ -22,12 +28,11 @@ export const InputContainer = styled.div`
 export const Input = styled.input`
   ${({ theme }) => css`
     width: 100%;
-    padding: 1rem;
     font-size: 2rem;
     border: none;
     outline: none;
     background: transparent;
-    color: #000;
+    color: ${theme.colors.text};
     border-radius: ${theme.border.radius};
 
     ::placeholder {
