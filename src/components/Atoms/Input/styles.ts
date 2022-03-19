@@ -17,7 +17,7 @@ export const InputContainer = styled.div`
     width: 100%;
     max-width: 40rem;
 
-    border-radius: ${theme.border?.radius};
+    border-radius: ${theme.border.radius};
 
     &:focus-within {
       background-color: transparent;

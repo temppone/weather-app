@@ -1,17 +1,22 @@
-import { Search } from '@styled-icons/material-outlined';
 import React from 'react';
 import cloudy from '../../assets/icons/cloudy.svg';
-import Input from '../../components/Atoms/Input';
-import WeatherIcon from '../../components/Atoms/WeatherIcon';
-import * as S from './styles';
-import CityTitle from './../../components/Atoms/CityTitle';
 import Temperature from '../../components/Atoms/Temperature';
+import WeatherIcon from '../../components/Atoms/WeatherIcon';
+import AutoComplete from '../../components/Molecules/AutoComplete';
+import CityTitle from './../../components/Atoms/CityTitle';
 import GroupInfos from './../../components/Molecules/GroupInfos/index';
+import * as S from './styles';
+
+const arrayTest = [
+  { name: 'São Paulo' },
+  { name: 'Rio de Janeiro' },
+  { name: 'Belo Horizonte' },
+];
 
 const Home = () => {
   return (
     <S.Container>
-      <Input placeholder="Search Location" icon={<Search />} />
+      <AutoComplete optionsArray={arrayTest} />
       <WeatherIcon svg={cloudy} />
       <CityTitle text="São Paulo" />
       <Temperature value={31} />

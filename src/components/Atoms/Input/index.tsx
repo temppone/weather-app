@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ChangeEvent, ReactNode, useState } from 'react';
 import * as S from './styles';
 
 export type InputProps = {
@@ -18,7 +18,7 @@ const Input = ({
   ...props
 }: InputProps) => {
   const [value, setValue] = useState(initialValue);
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newValue = e.currentTarget.value;
     setValue(newValue);
     !!onInput && onInput(newValue);
