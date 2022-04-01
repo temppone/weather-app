@@ -5,6 +5,8 @@ import { GlobalStyles } from './styles/global';
 import { mainTheme } from './styles/theme';
 
 const Home = lazy(() => import('./pages/Home'));
+const TestePage = lazy(() => import('./pages/TestePage'));
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +16,7 @@ function App() {
           <Router>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/testepage" element={<TestePage />} />
               <Route path="/*" element={<div>NOT FOUND 404</div>} />
             </Routes>
           </Router>

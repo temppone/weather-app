@@ -7,19 +7,31 @@ export const Container = styled.div`
 
 export const List = styled.ul`
   ${({ theme }) => css`
-    width: 100%;
-    max-height: 50%;
+    height: auto;
+    position: relative;
     background-color: ${theme.colors.white};
     list-style: none;
+    padding-left: 1rem;
+    border-bottom-left-radius: ${theme.border.radius};
+    border-bottom-right-radius: ${theme.border.radius};
   `}
 `;
 
 export const Item = styled.li`
   ${({ theme }) => css`
     padding: ${theme.spacings.xxsmall};
+    font-size: ${theme.font.sizes.xxsmall};
+    color: ${theme.colors.text};
+
+    &:nth-last-child(1) {
+      border-bottom-left-radius: ${theme.border.radius};
+      border-bottom-right-radius: ${theme.border.radius};
+    }
+
     cursor: pointer;
+
     &:hover {
-      background-color: ${theme.colors.secondaryText};
+      background-color: ${theme.colors.lightHover};
     }
   `}
 `;

@@ -7,12 +7,11 @@ type Option = {
 };
 
 type AutoCompleteProps = {
-  label?: string;
   placeholder?: string;
   optionsArray: Option[];
 };
 
-const AutoComplete = ({ optionsArray }: AutoCompleteProps) => {
+const AutoComplete = ({ optionsArray, placeholder }: AutoCompleteProps) => {
   const [display, setDisplay] = useState(false);
   const [options, setOptions] = useState<Option[]>([]);
   const [search, setSearch] = useState('');
@@ -29,7 +28,7 @@ const AutoComplete = ({ optionsArray }: AutoCompleteProps) => {
   return (
     <S.Container>
       <Input
-        placeholder="Search city"
+        placeholder={placeholder}
         onChange={(event: ChangeEvent<HTMLInputElement>) => {
           setDisplay(true);
           setSearch(event.currentTarget.value);

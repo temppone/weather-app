@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import cloudy from '../../assets/icons/cloudy.svg';
 import Temperature from '../../components/Atoms/Temperature';
 import WeatherIcon from '../../components/Atoms/WeatherIcon';
@@ -14,9 +15,14 @@ const arrayTest = [
 ];
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <S.Container>
-      <AutoComplete optionsArray={arrayTest} />
+      <AutoComplete
+        placeholder={t('Home.InputSearchCity')}
+        optionsArray={arrayTest}
+      />
       <WeatherIcon svg={cloudy} />
       <CityTitle text="São Paulo" />
       <Temperature value={31} />

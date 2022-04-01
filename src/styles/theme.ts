@@ -6,7 +6,7 @@ export const mainTheme: DefaultTheme = {
     gutter: '3.2rem',
   },
   border: {
-    radius: '0.4rem',
+    radius: '0.6rem',
   },
   font: {
     family:
@@ -46,6 +46,8 @@ export const mainTheme: DefaultTheme = {
     light: '#fffffe',
     dark: '#000000',
 
+    lightHover: '#f3f3f3',
+
     primary: '#375A7E',
     default: '#464545',
     danger: '#e74c3c',
@@ -63,4 +65,4 @@ export const mainTheme: DefaultTheme = {
   transition: {
     default: '0.2s ease-in-out',
   },
-};
+} as const;
